@@ -201,18 +201,19 @@ header img {
 #English .main h1{
     color: #000;
 }
-.main .videos .video{
+.main .right .video{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     margin-top: 4%;
 }
-.main .videos .video video{
-    max-width: 32%;
-    max-height: 35%;
-    margin-left: 1%;
+.main .right .video iframe{
+    min-width: 24%;
+    min-height: 35%;
+    margin-left: 0.35%;
     margin-bottom: 1%;
+    /* margin-bottom: 2%; */
     border-radius: 5px;
 }
 
@@ -340,13 +341,14 @@ footer h2 span {
     .main h2 {
         font-size: 2.5rem;
     }
-    .main .videos .video {
-        text-align: center;
+    .main .right .video {
         display: block;
+        text-align: center;
         }
-    .main .videos .video video {
-        margin-top: 4%;
-        min-width: 85%;
+    .main .right .video iframe {
+        width: 82%;
+        height: 50%;
+        margin-top: 2%;
     }
 
     header img {
