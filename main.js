@@ -1,5 +1,14 @@
 
-alert("صلى على النبى");
+Swal.fire({
+  title: "صلى على النبى",
+  showClass: {
+    popup: "animate__animated animate__fadeInDown",
+  },
+  hideClass: {
+    popup: "animate__animated animate__fadeOutUp",
+  },
+});
+
 function bar()
 {
     document.getElementById('nav').style.width="100%";
