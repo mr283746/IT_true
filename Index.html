@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <div class="loader-container">
+        <div class="loader"> </div>
+    </div>
     <nav id="nav">
         <span id="nav_bg"></span>
         <i id="b2" onclick="bar2()" class="fas fa-chevron-circle-left"></i><br>
@@ -39,9 +42,9 @@
         <header id="header">
             <h1>Exam schedule</h1>
             <i id="b1" onclick="bar()" class="fas fa-chevron-circle-right"></i>
-            <img src="exam2.jpg"
-                alt="جدول الامتحانات">
             <img src="exam1.jpg"
+                alt="جدول الامتحانات">
+            <img src="exam2.jpg"
                 alt="جدول الامتحانات">
         </header> <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -81,7 +84,7 @@
                     </li>
                 </ul>
 
-                <!-- <div class="right" data-aos="fade-right">
+                <div class="right" data-aos="fade-right">
                         <h2>Videos</h2>
 
                         <div class="video">
@@ -163,7 +166,7 @@
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write;
                                 encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe> -->
+                                allowfullscreen></iframe>
         </div>
     </div>
     </section>
@@ -377,7 +380,7 @@
 
 
 
-    <footer>
+    <footer id="footer">
         <div>
             <img src="profile.jpg"
                 alt="My Photo">
@@ -398,7 +401,6 @@
         </div>
     </footer>
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
