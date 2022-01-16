@@ -98,7 +98,7 @@ header{
 header #header-nav {
     height: 10%;
     width: 90%;
-    font-size: 2.5em;
+    font-size: 1.2em;
     background-color: #000;
     display: flex;
     justify-content: space-between;
@@ -112,7 +112,7 @@ header #header-nav {
 header #header-nav .logo {
     color: #fa0;
     padding: 10px;
-    font-size: 2.8em;
+    font-size: 2.5em;
     font-style: italic;
 }
 header #header-nav ul {
@@ -151,7 +151,7 @@ header #header-nav ul .subjects button {
     outline: none;
     background: none;
     color: #fff;
-    /* font-size: 18px; */
+    font-size: 1.2em;
     cursor: pointer;
 }
 
