@@ -30,10 +30,10 @@ body{
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 88;
 }
 
 .hero h1 {
@@ -104,6 +104,15 @@ header{
     width: 100%;
     overflow: hidden;
     z-index: 1;
+}
+header::after {
+    content: '';
+    height:100vh;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 }
 #header-nav {
     height: 10%;
@@ -485,6 +494,9 @@ footer h2 span {
         padding: 8px 14px;
         height: 45px;
     }
+    .hero h1 {
+        font-size: 40px;
+    }
     #header-nav {
         font-size: 0.68rem;
     }
@@ -493,6 +505,9 @@ footer h2 span {
     }
     header {
         background-size: contain;
+    }
+    header::after {
+        height: 103.35vh;
     }
     .main ul {
         display: block;
