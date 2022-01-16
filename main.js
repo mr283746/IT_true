@@ -25,21 +25,26 @@ window.onload = function () {
     let loader = document.querySelector('.loader');
     let loaderContainer = document.querySelector(".loader-container")
     
-    // let nav = document.getElementById("nav");
     let all = document.getElementById("all");
     let footer = document.getElementById("footer");
     document.body.style.overflow = "hidden";
-    // nav.style.display = "none";
     all.style.display = "none";
     footer.style.display = "none";
 
     setTimeout(function () {
         loader.style.display = "none";
-        // nav.style.display = "block";
         all.style.display = "block";
         footer.style.display = "block";
         document.body.style.overflow = "auto";
         loaderContainer.style.display = "none";
 
-    }, 10)
+    }, 1)
+}
+
+let up = document.querySelector(".up");
+
+window.onscroll = function () {
+    if(scrollY == 725) {
+        up.style.display = "none";
+    }
 }
