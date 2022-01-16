@@ -124,7 +124,7 @@ header::after {
     position: fixed;
     margin: auto 5%;
     margin-top: 15px;
-    z-index: 66;
+    z-index: 99;
 }
 #header-nav::after {
     content: '';
