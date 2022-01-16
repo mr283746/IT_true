@@ -41,10 +41,15 @@ window.onload = function () {
     }, 1)
 }
 
-let up = document.querySelector(".up");
 
 window.onscroll = function () {
-    if(scrollY == 725) {
-        up.style.display = "none";
+    let toUp = document.querySelector(".to-up");
+    if(scrollY >= 725) {
+        toUp.style.display = "block";
+        toUp.addEventListener("click" , function() {
+            window.scrollTo(0,0);
+        })
+    } else {
+        toUp.style.display = "none";
     }
 }
