@@ -97,14 +97,14 @@ header{
 }
 header #header-nav {
     height: 10%;
-    width: 80%;
+    width: 90%;
     background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 25px;
     position: fixed;
-    margin: auto 10%;
+    margin: auto 5%;
     margin-top: 15px;
     z-index: 999999;
 }
@@ -141,6 +141,14 @@ header #header-nav ul .subjects {
     position: relative;
     /* padding-bottom: 30px; */
     color: #fff;
+}
+
+header #header-nav ul .subjects button {
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 header #header-nav .sub-menu {
@@ -408,7 +416,7 @@ footer h2 span {
 @media screen and (max-width: 900px) {
 
     header #header-nav {
-        font-size: 0.78rem;
+        font-size: 0.65rem;
     }
     
     header {
