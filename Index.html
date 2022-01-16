@@ -1,525 +1,490 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Raleway:ital,wght@1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Limelight&family=Raleway:ital,wght@1,200&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Limelight', cursive;
-    text-transform: capitalize;
-    transition: all 0.3s linear;
-}
-html{
-    scroll-behavior: smooth;
-    z-index: 1;
-}
-#all{
-    width: 100%;
-    display: none;
-}
-body{
-    /* background-color: #2A3F54; */
-    background: url("https://images.pexels.com/photos/5309563/pexels-photo-5309563.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    background-position: center;
-}
-/* #nav{
-    width: 0;
-    position: fixed;
-    min-height: 100vh;
-    transition: width 0.3s ease-in-out;
-    z-index: 5;
-    overflow: hidden;
-    display: none;
-}
-#nav #nav_bg {
-    content: '';
-    background-color: #2a3f54;
-    transition: width 0.3s ease-in-out;
-    position: fixed;
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.7;
-    z-index: -1;
-}
-#nav ul li a{
-font-family: 'Amiri', serif;
-}
-#nav ul{
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.3s linear;
-}
-#nav ul li{
-    font-size: 3rem;
-    color: aqua;
-    display: block;
-    width: 100%;
-    text-align: center;
-} 
-#nav ul li a{
-    color: #fff;
-    transition: color 0.2s linear;
-    font-family: 'Raleway', sans-serif;
-}
-#nav ul li a span {
-    display: inline-block;
-    width: 100%;
-    height: 2px;
-    background-color: #222;
-}
-#nav ul li a:hover{
-    color: royalblue;
-} */
-header{
-    min-height: 70vh;
-    width: 100%;
-    /* background-image: url("https://th.bing.com/th/id/R.afae70a0b66a0ab54559fd766be9b506?rik=AfP2xpP6atnEMQ&riu=http%3a%2f%2fpws.npru.ac.th%2fgowitcha%2fdata%2ffiles%2fIT_logo_BW.png&ehk=lw0tItIKsJtBFcyo%2f84l5Wkg3D%2fuF3KHz%2fL9wiRFoEI%3d&risl=&pid=ImgRaw&r=0"); */
-    /* background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center; */
-    overflow: hidden;
-    /* position: relative; */
-    z-index: 1;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; */
-    /* background-color: #fff; */
-}
-header #header-nav {
-    height: 10%;
-    width: 90%;
-    background-color: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 25px;
-    position: fixed;
-    margin: auto 5%;
-    margin-top: 15px;
-    z-index: 999999;
-}
-header #header-nav .logo {
-    color: #fa0;
-    padding: 10px;
-}
-header #header-nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-}
+<!DOCTYPE html>
+<html>
 
-header #header-nav ul li a {
-    color: #fff;
-}
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Information_Technology</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://kit.fontawesome.com/8f311fc98b.js"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <link rel="stylesheet" href="Phone.css">
+        <link rel="stylesheet" href="all.min.css" />
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font-awesome.min.css" />
+        <script src="main.js"></script>
+    </head>
 
-header #header-nav ul li {
-    padding: 10px;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 20px;
-    transition: all 0.3s linear;
-}
-header #header-nav ul li:nth-child(1) {
-    background-color: #333;
-}
-header #header-nav ul li:hover {
-    background: #333;
-} 
+    <body>
 
-header #header-nav ul .subjects {
-    position: relative;
-    /* padding-bottom: 30px; */
-    color: #fff;
-}
-
-header #header-nav ul .subjects button {
-    border: none;
-    outline: none;
-    background: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-header #header-nav .sub-menu {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    position: absolute;
-    background-color: #333;
-    width: fit-content;
-    opacity: 0;
-    left: -30px;
-    top: 32px;
-    border-radius: 10px;
-}
-header #header-nav .subjects:hover .sub-menu  {
-    display: block;
-    opacity: 1;
-}
-header #header-nav .sub-menu li {
-    display: block;
-    width: fit-content;
-}
-header #header-nav .sub-menu li:hover {
-    background-color: #fff;
-    border-radius: 20px;
-    /* padding: 10px; */
-}
-header #header-nav .sub-menu li a {
-    padding: 20px 30px;
-}
-header #header-nav .sub-menu li a:hover {
-    color: #222;
-}
-
-header h1 {
-    margin: 20px;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-}
-header img {
-    width: 48.5%;
-    height: 70vh;
-    margin: 10px;
-}
-/* header::after{
-    content: '';
-    background: #000;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 80vh;
-    width: 100%;
-    opacity: 0.4;
-    z-index: -2;
-} */
-#b1,#b2{
-    position: fixed;
-    cursor: pointer;
-    z-index: 1;
-    font-size: 30px;
-}
-#b1 {
-    display: block;
-    left: 5px;
-    top: 50%;
-    z-index: 6;
-}
-#b2 {
-    display: none;
-    right: 5px;
-    top: 50%;
-    z-index: 6;
-}
-.main{
-    background: #eee;
-    height: fit-content;
-}
-.main ul li a{
-    color: rgb(0, 0, 0);
-    transition: all 0.3s ease-in-out;
-}
-.main ul li a:hover{
-    color: royalblue;
-}
-.main ul{
-    border-right: 8px solid royalblue;
-    border-left: 8px solid royalblue;
-    height: fit-content;
-    box-shadow:5px 5px 25px rgb(179 172 172);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: fit-content;
-}
-.main ul li{
-    padding: 30px 10px;
-    border-right: 2px #000 solid
-}
-.main ul li:nth-last-child(1){
-    border: none;
-}
-.main ul li a{
-    font-size: 1.2em;
-}
-.main h1{
-    text-align: center;
-    /* margin-bottom: 6%; */
-    font-size: 6rem;
-    letter-spacing: 5px;
-    color: firebrick;
-    font-family: 'Amiri', serif;
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.main h1 span{
-    height: 4px;
-    width: 100%;
-    background-color: midnightblue;
-    display: inline-block;
-}
-.main h2{
-    margin-top: 2%;
-    font-size: 4.5rem;
-    text-align: center;
-    color: darkblue;
-}
-#Math .main h1{
-    color: royalblue;
-}
-#Chemistry .main h1{
-    color: teal;
-}
-#Computer .main h1{
-    color: green;
-}
-#English .main h1{
-    color: #000;
-}
-.main .right .video{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 4%;
-}
-.main .right .video iframe{
-    min-width: 24%;
-    min-height: 35%;
-    margin-left: 0.35%;
-    margin-bottom: 1%;
-    /* margin-bottom: 2%; */
-    border-radius: 5px;
-}
+        <div class="loader-container">
+            <div class="loader"> </div>
+        </div>
 
 
+        <!-- <nav id="nav">
+        <span id="nav_bg"></span>
+        <i id="b2" onclick="bar2()" class="fas fa-chevron-circle-left"></i><br>
+        <ul id="nav_ul">
+            <li><span></span><a onclick="li()" href="https://ITHome.mr2837465.repl.co">Home</a><span></span></li><br>
+            <br><br>
+            <li><span></span><a onclick="li()" href="#Physics">Physics</a><span></span></li><br>
+            <br><br>
+            <li><span></span><a onclick="li()" href="#Math">Math</a><span></span></li><br>
+            <br><br>
+            <li><span></span><a onclick="li()" href="#Chemistry">Chemistry</a><span></span></li><br>
+            <br><br>
+            <li><span></span><a onclick="li()" href="#Computer">Computer</a><span></span></li><br>
+            <br><br>
+            <li><span></span><a onclick="li()" href="#English">English</a><span></span></li>
+        </ul>
+    </nav> -->
+        <div id="all">
+            <header id="header">
+                <nav id="header-nav">
+                    <h2 class="logo">E-M_R</h2>
+                    <ul>
+                        <li><a href="https://ITHome.mr2837465.repl.co" target="_blank">Home</a></li>
+                        <li><a href="https://www.facebook.com/mr2837465/" target="_blank">My
+                                Profile</a></li>
+                        <li id="subjects" class="subjects" ><button>Subjects</button>
+                            <ul class="sub-menu">
+                                <li><a href="#Physics">Physics</a></li>
+                                <li><a href="#Math">Math</a></li>
+                                <li><a href="#Chemistry">Chemistry</a></li>
+                                <li><a href="#Computer">Computer</a></li>
+                                <li><a href="#English">English</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://formsubmit.co/el/zayaxa" target="_blank">Contact US</a></li>
+                    </ul>
+                </nav>
+                <!-- <h1>Exam schedule</h1>
+            <i id="b1" onclick="bar()" class="fas fa-chevron-circle-right"></i>
+            <img src="exam1.jpg"
+                alt="جدول الامتحانات">
+            <img src="exam2.jpg"
+                alt="جدول الامتحانات"> -->
+            </header> <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <div id="Physics">
+                <section class="main" data-aos="fade-right">
+                    <h1><span></span> Physics <span></span></h1>
+                    <h2>Files</h2>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIMPwgb97q6-5jAY"
+                                target="blanc">1. Buoyant Forces and
+                                Archimedes’
+                                Principle (2 files merged)</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIAzwgb97wre5jAY"
+                                target="blanc">3. Buoyant Forces and
+                                Archimedes’
+                                Principle</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIKnwgb973bS5jAY"
+                                target="blanc">4. Buoyant Forces and
+                                Archimedes’
+                                Principle</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIGXwgb97hLW5jAY"
+                                target="blanc">5. HYDRODYNAMICS</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIGrwgb97urW5jAY"
+                                target="blanc">6. HYDRODYNAMICS</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIKHwgb97z7DPjAY"
+                                target="blanc">1. UNITS AND
+                                DIMENSIONS</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIOHwgb97nbHPjAY"
+                                target="blanc">2. UNITS AND
+                                DIMENSIONS</a>
+                        </li>
+                    </ul>
+
+                    <div class="right" data-aos="fade-right">
+                        <h2>Videos</h2>
+
+                        <div class="video">
 
 
+                            <iframe
+                                src="https://www.youtube.com/embed/4dgWkOFQvyE?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/E0LKLEKvD8M?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/5wgeVOTzU8A?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/BCyQB7t8cSw?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/6WidNmqUxIo?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/Iw45MqIyGRw?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/sVDvpgQSpdA?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/YERmGtt-wis?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/3_L48SOgsDA?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/vJMAhfZ0Cmw?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/J-iOHi88D0c?list=PLka1IWY71Cp_-sLV_gQEM8rkG-TPnm1G9"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+            </div> <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-footer {
-    margin-top: 50px;
-    height: 50vh;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    display: none;
-}
+            <div id="Math">
+                <section class="main" data-aos="fade-right">
+                    <h1><span></span> Math <span></span></h1>
+                    <h2>Files</h2>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIIjwgb97q9fCjAY"
+                                target="blanc">Math assignments</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIM7wgb97gaGsjgY"
+                                target="blanc">باستخدام الاستنتاج الرياضي
+                                اثبت ان</a>
+                        </li>
+                    </ul>
 
-footer::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: #000;
-    opacity: 0.7;
-    z-index: -1;
-}
-
-footer div {
-    width: 100%;
-    text-align: center;
-    z-index: 2;
-}
-
-footer img {
-    margin-top: 3%;
-    text-align: center;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    margin-bottom: 1%;
-    z-index: 3;
-}
-footer a {
-    align-self: center;
-    margin-right: 0.3%;
-    margin-left: 0.3%;
-    cursor: pointer;
-    z-index: 3;
-}
-
-footer a i {
-    padding: 10px;
-    font-size: 30px;
-    transition: transform 0.3s linear;
-}
-footer a i:hover {
-    transform: translateY(-20px);
-}
-
-footer a:nth-child(1) i {
-    color: royalblue;
-}
-footer a:nth-child(2) i {
-    color: royalblue;
-}
-footer a:nth-child(3) i {
-    color: green;
-}
-footer a:nth-child(4) i {
-    color: #444;
-}
-
-footer h2,h3 {
-    margin-top: 2%;
-    color: #fff;
-}
-footer h3 span {
-    color: brown;
-}
-footer h2 span {
-    color: teal;
-}
+                    <div class="right" data-aos="fade-right">
+                        <h2>Videos</h2>
+                        <div class="video">
 
 
+                            <iframe
+                                src="https://www.youtube.com/embed/jwEiVtIIEMQ?list=PLvq4hTb89-C4kqf_Xb2UCWeyXiXw5vNDk"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/hei_gzRH1lk?list=PLvq4hTb89-C4kqf_Xb2UCWeyXiXw5vNDk"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/3Xv175zlbyo?list=PLvq4hTb89-C4kqf_Xb2UCWeyXiXw5vNDk"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/76BiIlCk3v8?list=PLvq4hTb89-C4kqf_Xb2UCWeyXiXw5vNDk"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+            </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+            <div id="Chemistry">
+                <section class="main" data-aos="fade-right">
+                    <h1><span></span> Chemistry <span></span></h1>
+                    <h2>Files</h2>
 
+                    <ul>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIAfwgb97i5nUjAY"
+                                target="blanc">Quantum numbers &</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIDPwgb97rZrUjAY"
+                                target="blanc">Models of Atom</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIHbwgb97zJHZjAY"
+                                target="blanc">كيمياء عملي</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sILbwgb972KSsjgY"
+                                target="blanc">Lecture No. 1</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIFzwgb97uaWsjgY"
+                                target="blanc">Lecture No. 2</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIPbwgb97jaasjgY"
+                                target="blanc">Lecture No. 3</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIO3wgb97-aasjgY"
+                                target="blanc">Lecture No. 4</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIPPwgb97r6esjgY"
+                                target="blanc">Lecture No. 5</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sID3wgb978qesjgY"
+                                target="blanc">Lecture No. 6</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIBnwgb97kfq1jgY"
+                                target="blanc">Chemical Equilibrium Lecture 1</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIGfwgb976vq1jgY"
+                                target="blanc">Chemical Equilibrium Lecture 2</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIDDwgb97z_u1jgY"
+                                target="blanc">Chemical Equilibrium Lecture 3</a>
+                        </li>
+                    </ul>
+                </section>
+            </div> <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+            <div id="Computer">
+                <section class="main" data-aos="fade-right">
+                    <h1><span></span> Computer <span></span></h1>
+                    <h2>Files</h2>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIAHwgb976s_PjAY"
+                                target="blanc">Ch.01_Introduction_to_computers</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIEfwgb972NDPjAY"
+                                target="blanc">Computer glossary</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIFvwgb97poC2jgY"
+                                target="blanc">Ex_2</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sILLwgb97rIG2jgY"
+                                target="blanc">Exercise(Flowchart)</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sINjwgb97pYO2jgY"
+                                target="blanc">ALGORITHMS AND FLOWCHART</a>
+                        </li>
+                    </ul>
 
+                    <div class="right" data-aos="fade-right">
+                        <h2>Videos</h2>
+                        <div class="video">
+                            <!-- Conversions between numerical systems -->
+                            <iframe
+                                src="https://www.youtube.com/embed/0syhWLFdXdM?list=PLRt03R7mo3r6ZRzOMJIWG9BJcSzaAo4XW"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
 
+                            <!-- <Calculations of numerical systems> -->
 
+                            <iframe
+                                src="https://www.youtube.com/embed/-ewn1HLyWco?list=PLRt03R7mo3r7GOx0roD9jlKqM9OpfGfG2"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/Nig1gORr4iI?list=PLRt03R7mo3r7GOx0roD9jlKqM9OpfGfG2"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/1dROne_9B2U?list=PLRt03R7mo3r7GOx0roD9jlKqM9OpfGfG2"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/t2-slrWh7Xo?list=PLRt03R7mo3r7GOx0roD9jlKqM9OpfGfG2"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/t2-slrWh7Xo?list=PLRt03R7mo3r7GOx0roD9jlKqM9OpfGfG2"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/7Hr0FHmS-08?list=PLRt03R7mo3r7GOx0roD9jlKqM9OpfGfG2"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+            </div> <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+            <div id="English">
+                <section class="main" data-aos="fade-right">
+                    <h1><span></span> English <span></span></h1>
+                    <h2>Files</h2>
 
+                    <ul>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIGnwgb97ip7UjAY"
+                                target="blanc">Computer glossary</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sICjwgb97vp7UjAY"
+                                target="blanc">IT-2020</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://us.docworkspace.com/d/sIAfwgb97zfy1jgY"
+                                target="blanc">English</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 900px) {
-
-    header #header-nav {
-        font-size: 0.65rem;
-    }
-    
-    header {
-        background-size: contain;
-    }
-    .main ul {
-        display: block;
-        width: 100%
-    }
-    .main ul li {
-        border: none;
-        text-align: center
-    }
-    .main h1 {
-        margin-top: 5%;
-        font-size: 4rem;
-    }
-    .main h2 {
-        font-size: 2.5rem;
-    }
-    .main .right .video {
-        display: block;
-        text-align: center;
-        }
-    .main .right .video iframe {
-        width: 82%;
-        height: 50%;
-        margin-top: 2%;
-    }
-
-    header img {
-        width: 95%;
-        height: 52vh;
-    }
-    
-    }
-
+        </div>
 
 
 
 
 
 
+        <footer id="footer">
+            <div>
+                <img src="profile.jpg"
+                    alt="My Photo">
+            </div>
 
+            <div>
+                <a href="https://www.facebook.com/mr2837465/"><i class="fab
+                        fa-facebook"></i></a>
+                <a href="https://mobile.twitter.com/Mohamed1973465"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=+2001119746772"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/mr2837465/"><i class="fab
+                        fa-instagram"></i></a>
+            </div>
 
+            <div>
+                <h2>Created by: <span>E-M_R</span></h2>
+                <h3>( <span>Mohamed ragab saad</span> )</h3>
+            </div>
+        </footer>
 
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+    </script>
+    </body>
 
-    /* loading.......... */
-
-.loader-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    /* overflow: hidden; */
-    background-color: #000;
-}
-.loader
-{
-    width: 150px;
-    height: 150px;
-    position: relative;
-    background: linear-gradient(45deg,transparent,transparent 40%,#e5f403);
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-}
-@keyframes animate
-{
-    0%
-    {
-    transform: rotate(0deg);
-    filter: hue-rotate(0deg);
-    }
-    100%
-    {
-    transform: rotate(360deg);
-    filter: hue-rotate(360deg);
-    }
-}
-.loader::before
-{
-    content: ' ';
-    position: absolute;
-    left: 6px;
-    bottom: 6px;
-    right: 6px;
-    top: 6px;
-    border-radius: 50%;
-    z-index: 1000;
-    background: #000;
-}
-.loader::after
-{
-    content: ' ';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    border-radius: 50%;
-    z-index: 1;
-    background: linear-gradient(45deg,transparent,
-    transparent 40%,#e5f403);
-    filter: blur(30px);
-}
+</html>
