@@ -148,6 +148,7 @@ header #header-nav ul .subjects button {
     outline: none;
     background: none;
     color: #fff;
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -418,7 +419,9 @@ footer h2 span {
     header #header-nav {
         font-size: 0.65rem;
     }
-    
+    header #header-nav ul .subjects button {
+        font-size: 0.65rem;
+    }
     header {
         background-size: contain;
     }
