@@ -9,6 +9,7 @@
     list-style: none;
     font-family: 'Limelight', cursive;
     text-transform: capitalize;
+    transition: all 0.3s linear;
 }
 html{
     scroll-behavior: smooth;
@@ -26,7 +27,7 @@ body{
     background-attachment: fixed;
     background-position: center;
 }
-nav{
+/* #nav{
     width: 0;
     position: fixed;
     min-height: 100vh;
@@ -35,7 +36,7 @@ nav{
     overflow: hidden;
     display: none;
 }
-nav #nav_bg {
+#nav #nav_bg {
     content: '';
     background-color: #2a3f54;
     transition: width 0.3s ease-in-out;
@@ -47,41 +48,40 @@ nav #nav_bg {
     opacity: 0.7;
     z-index: -1;
 }
-ul li a{
+#nav ul li a{
 font-family: 'Amiri', serif;
 }
-nav ul{
+#nav ul{
     z-index: 1;
     width: 100%;
-    /* background-color: #2a3f54; */
     height: 100%;
     overflow: hidden;
     transition: all 0.3s linear;
 }
-nav ul li{
+#nav ul li{
     font-size: 3rem;
     color: aqua;
     display: block;
     width: 100%;
     text-align: center;
 } 
-nav ul li a{
+#nav ul li a{
     color: #fff;
     transition: color 0.2s linear;
     font-family: 'Raleway', sans-serif;
 }
-nav ul li a span {
+#nav ul li a span {
     display: inline-block;
     width: 100%;
     height: 2px;
     background-color: #222;
 }
-nav ul li a:hover{
+#nav ul li a:hover{
     color: royalblue;
-}
+} */
 header{
     min-height: 70vh;
-    min-width: 100%;
+    width: 100%;
     /* background-image: url("https://th.bing.com/th/id/R.afae70a0b66a0ab54559fd766be9b506?rik=AfP2xpP6atnEMQ&riu=http%3a%2f%2fpws.npru.ac.th%2fgowitcha%2fdata%2ffiles%2fIT_logo_BW.png&ehk=lw0tItIKsJtBFcyo%2f84l5Wkg3D%2fuF3KHz%2fL9wiRFoEI%3d&risl=&pid=ImgRaw&r=0"); */
     /* background-repeat: no-repeat;
     background-size: contain;
@@ -89,12 +89,93 @@ header{
     overflow: hidden;
     /* position: relative; */
     z-index: 1;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     /* background-color: #fff; */
 }
+header #header-nav {
+    height: 10%;
+    width: 80%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    position: fixed;
+    margin: auto 10%;
+    margin-top: 15px;
+    z-index: 999999;
+}
+header #header-nav .logo {
+    color: #fa0;
+    padding: 10px;
+}
+header #header-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+header #header-nav ul li a {
+    color: #fff;
+}
+
+header #header-nav ul li {
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+}
+header #header-nav ul li:nth-child(1) {
+    background-color: #333;
+}
+header #header-nav ul li:hover {
+    background: #333;
+} 
+
+header #header-nav ul .subjects {
+    position: relative;
+    /* padding-bottom: 30px; */
+    color: #fff;
+}
+
+header #header-nav .sub-menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: #333;
+    width: fit-content;
+    opacity: 0;
+    left: -30px;
+    top: 32px;
+    border-radius: 10px;
+}
+header #header-nav .subjects:hover .sub-menu  {
+    display: block;
+    opacity: 1;
+}
+header #header-nav .sub-menu li {
+    display: block;
+    width: fit-content;
+}
+header #header-nav .sub-menu li:hover {
+    background-color: #fff;
+    border-radius: 20px;
+    /* padding: 10px; */
+}
+header #header-nav .sub-menu li a {
+    padding: 20px 30px;
+}
+header #header-nav .sub-menu li a:hover {
+    color: #222;
+}
+
 header h1 {
     margin: 20px;
     width: 100%;
@@ -260,8 +341,8 @@ footer img {
 }
 footer a {
     align-self: center;
-    margin-right: 0.5%;
-    margin-left: 0.5%;
+    margin-right: 0.3%;
+    margin-left: 0.3%;
     cursor: pointer;
     z-index: 3;
 }
@@ -325,6 +406,11 @@ footer h2 span {
 
 
 @media screen and (max-width: 900px) {
+
+    header #header-nav {
+        font-size: 0.78rem;
+    }
+    
     header {
         background-size: contain;
     }
