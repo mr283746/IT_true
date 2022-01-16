@@ -98,6 +98,7 @@ header{
 header #header-nav {
     height: 10%;
     width: 90%;
+    font-size: 2.5em;
     background-color: #000;
     display: flex;
     justify-content: space-between;
@@ -111,6 +112,8 @@ header #header-nav {
 header #header-nav .logo {
     color: #fa0;
     padding: 10px;
+    font-size: 2.8em;
+    font-style: italic;
 }
 header #header-nav ul {
     display: flex;
@@ -148,7 +151,7 @@ header #header-nav ul .subjects button {
     outline: none;
     background: none;
     color: #fff;
-    font-size: 18px;
+    /* font-size: 18px; */
     cursor: pointer;
 }
 
@@ -417,7 +420,7 @@ footer h2 span {
 @media screen and (max-width: 900px) {
 
     header #header-nav {
-        font-size: 0.65rem;
+        font-size: 0.68rem;
     }
     header #header-nav ul .subjects button {
         font-size: 0.65rem;
