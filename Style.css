@@ -420,7 +420,7 @@ footer h2 span {
 @media screen and (max-width: 900px) {
 
     header #header-nav {
-        font-size: 0.68rem;
+        font-size: 0.65rem;
     }
     header #header-nav ul .subjects button {
         font-size: 0.65rem;
